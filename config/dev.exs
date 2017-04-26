@@ -41,6 +41,6 @@ config :real_world, RealWorld.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "realworld_dev",
+  database: "real_world_dev",
   hostname: "localhost",
   pool_size: 10
