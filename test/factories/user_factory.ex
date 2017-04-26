@@ -5,9 +5,9 @@ defmodule RealWorld.Factory.UserFactory do
 
       alias RealWorld.Users.User
 
-      @user_create_attrs %{email: "some email", password: "some password", username: "some username"}
+      @user_create_attrs %{email: "some email", password: "some password", username: "some username", bio: "some bio", image: "some image"}
       @user_invalid_attrs %{email: nil, password: nil, username: nil}
-      @user_update_attrs %{email: "some updated email", password: "some updated password", username: "some updated username"}
+      @user_update_attrs %{email: "some updated email", password: "some updated password", username: "some updated username", bio: "some updated bio", image: "some updated image"}
 
       def user_factory do
         user = create_user_attrs()
