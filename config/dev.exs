@@ -39,8 +39,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :realworld, RealWorld.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("DATA_DB_USER"),
+  password: System.get_env("DATA_DB_PASS"),
   database: "realworld_dev",
-  hostname: "localhost",
+  hostname: System.get_env("DATA_DB_HOST"),
   pool_size: 10

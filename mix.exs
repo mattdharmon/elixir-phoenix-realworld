@@ -17,11 +17,11 @@ defmodule RealWorld.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {RealWorld.Application, []},
-     extra_applications: [:logger, :runtime_tools]]
+     extra_applications: [:logger, :runtime_tools, :comeonin, :ex_machina]]
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "test/support", "test/factories"]
   defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.
@@ -33,7 +33,9 @@ defmodule RealWorld.Mixfile do
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:comeonin, "~> 3.0"},
+     {:ex_machina, "~> 2.0", only: :test}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
