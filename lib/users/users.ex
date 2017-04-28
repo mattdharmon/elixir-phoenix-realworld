@@ -35,7 +35,7 @@ defmodule RealWorld.Users do
   defp user_changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [:username, :password, :email])
-    |> validate_required([:username, :password])
+    |> validate_required([:email, :username, :password])
     |> unique_constraint(:username, name: :unq_index_accounts_users_username)
   end
 
